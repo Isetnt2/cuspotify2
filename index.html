@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cuspotify</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dark-theme.css" class="darkTheme">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="font-awesome-animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" integrity="sha256-p6xU9YulB7E2Ic62/PX+h59ayb3PBJ0WFTEQxq0EjHw=" crossorigin="anonymous" />    </head>
+  
+  <body>
+    <div class="container">
+    <a class="link"><img src="." alt="" id="album1"></a>
+        <img src="." alt="" id="album2">
+        <img src="." alt="" id="album3">
+    </div>
+    <canvas id="myLineChart" width="400" height="400"></canvas>
+    <div class="vertical-menu" id="vertical-menu">
+    <div class="close-playlist small" data-toggle="vertical-menu"><span></span></div>
+</div>
+    <button type="button" class="playlistToggle" data-toggle="vertical-menu"><i class="fas fa-bars fa-3x"></i></button>
+  <p id="songName"></p>
+  <p id="artists"></p>
+  <i class="mdi mdi-settings mdi-32px settings"></i>   
+    <div class=" crl center-inner" id="noselect">
+    <ul>
+    <i class="fa fa-fw fa-step-backward fa-3x prev"></i>
+	<i class="fa fa-fw fa-play fa-3x play"></i>
+    	<i class="fa fa-fw fa-pause fa-3x pause"></i>
+    <i class=" fa fa-fw fa-step-forward fa-3x next"></i>
+      <i class="mdi mdi-repeat-off mdi-48px repeat-track"></i>     
+    <i class="mdi mdi-repeat mdi-48px repeat-1"></i>
+      <i class="mdi mdi-repeat-once mdi-48px repeat-2"></i>
+      <!--<i class="fas fa-list-ul playlists"></i> -->
+      </ul>
+      <div class="ui-slider ui-slider-horizontal pos" id="position-slider"></div>
+    <div class="volume-slider">
+      <i class="mdi mdi-volume-low volume volume-low"></i>
+      <i class="mdi mdi-volume-medium volume volume-medium"></i>
+      <i class="mdi mdi-volume-high volume volume-high"></i>
+      <div class="ui-slider ui-slider-horizontal" id="slider"></div>
+       <p id="slidervalue"></p>
+      </div>
+      </div>
+ <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Select theme:</p>
+        <div class="toggle-body">
+        <div class="toggle-btn"></div>
+      </div>
+    </div>
+  </div>
+    <a href="#" onclick="document.cookie='cookiebar=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; setupCookieBar(); return false;"></a>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" integrity="sha256-+HFTkhrmtDQo9Mtge4YkU2Z0k8XL+Ore0sN4wiXppT8=" crossorigin="anonymous"></script>
+    <script src="cookies.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="notification.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookie-bar@1.7.1/cookiebar-latest.min.js?theme=flying&tracking=1&always=1" integrity="sha256-P2tNAn3e9S0KNTv8uWcZjsM6FcDDNCnlePi3D28Bq+A=" crossorigin="anonymous"></script>
+    <script src="theme-changer.js"></script>
+    <script src="script.js" defer></script>
+  </body>  
+</html>
